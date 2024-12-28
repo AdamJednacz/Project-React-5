@@ -1,0 +1,41 @@
+:root{
+  --white:#F6F6F6;
+  --grey:#CCCCCC;
+  --black:#252525;
+  --light-primary:#C9BeB3;
+  --primary:#C49C74;
+
+
+
+  //1.2*
+
+  --fs-h1:2.986rem;
+  --fs-h2:2.488rem;
+  --fs-h3:2.074rem;
+  --fs-h4:1.728rem;
+  --fs-h5:1.44rem;
+  --fs-h6:1.2rem;
+  --fs-p:1rem;
+  --fs-small:0.833rem;
+
+  --fs-btn:1.2rem
+}
+
+
+@include desktop{
+
+  :root{
+    //1.33
+
+    --fs-h1:5.61rem;
+    --fs-h2:4.209rem;
+    --fs-h3:3.157rem;
+    --fs-h4:2.369rem;
+    --fs-h5:1.777rem;
+    --fs-h6:1.333rem;
+    --fs-p:1rem;
+    --fs-small:0.75rem;
+
+  }
+
+}

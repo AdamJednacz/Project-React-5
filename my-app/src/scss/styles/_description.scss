@@ -1,0 +1,30 @@
+.description {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 48px 0;
+  @include desktop{
+    padding: 80px 0;
+  }
+  .container{
+    justify-content: center;
+   flex-wrap: wrap;
+    gap: 64px;
+    .text{
+      text-align: center;
+
+      max-width: 75%;
+      @include desktop{
+        max-width: 25%;
+      }
+      h2{
+        font-size: var(--fs-h5);
+        font-weight: bolder;
+        margin-bottom: 16px;
+      }
+      p{
+
+        font-weight: lighter;
+      }
+    }
+  }
+}

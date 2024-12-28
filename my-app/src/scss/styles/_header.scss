@@ -1,0 +1,150 @@
+header{
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 4;
+  transition: all 0.3s ease-in-out ;
+  color: var(--white);
+  padding: 12px 0;
+  @include desktop {
+    background: linear-gradient(to left, var(--gradient--bg) 25%, transparent 20%);
+    position: relative;
+    padding: 0 0  24px 0;
+  }
+
+
+  .container{
+
+    .hamburger {
+      cursor: pointer;
+      display: block;
+      z-index: 1001;
+      @include desktop {
+        display: none;
+      }
+      .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin:4px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background:var(--white) ;
+        border-radius:32px ;
+        z-index: 1000;
+      }
+      &.open .bar{
+       background: var(--black);
+      }
+      &.open .bar:nth-child(2) {
+        opacity: 0;
+      }
+      &.open .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+      &.open .bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+    h2{
+      font-size: var(--fs-h2);
+      span{
+        font-size: 1rem;
+      }
+    }
+    nav{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      background-color: var(--white);
+      opacity: 0;
+      max-height: 0;
+      height: 0;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+
+
+      transition: all 0.5s ease-in-out;
+
+
+      &.open{
+        opacity: 1;
+        height: 100svh;
+        max-height: 100svh;
+        z-index: 1000;
+        background-color: var(--white);
+      };
+      @include desktop {
+        width: auto;
+        position: unset;
+        transform: unset;
+        flex-direction: row;
+        opacity: 1;
+        max-height: unset;
+        height: auto;
+        z-index: 1000;
+        font-size: 1.25rem;
+
+
+        --r: 100px; /* control the radius */
+        border: var(--r) solid #0000;
+        border-top: 0;
+        border-bottom: 0;
+        //border-radius: 0 0 calc(2 * var(--r)) calc(2 * var(--r)) ;
+        border-bottom-left-radius: 100px 45px;
+        border-bottom-right-radius: 100px 45px;
+        mask:
+          radial-gradient(100% 100% at 100% 100%, #0000 98%, #000) 100% 0 / var(--r) var(--r),
+          radial-gradient(100% 100% at 0% 100%, #0000 98%, #000) 0 0 / var(--r) var(--r),
+          linear-gradient(#000 0 0) padding-box;
+        mask-repeat: no-repeat;
+
+
+
+
+      }
+      .menu_container {
+        gap: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include desktop{
+          padding: 36px 110px;
+          flex-direction: row;
+          background-color: var(--white);
+
+        }
+        p {
+          font-size: var(--fs-p);
+          color: var(--black);
+
+        }
+      }
+    }
+    button{
+      display: none;
+      color: var(--white);
+      background-color: transparent;
+      border-radius: 36px;
+      border: solid 1px var(--white);
+      white-space: nowrap;
+      font-size: var(--fs-btn);
+      padding: 8px;
+
+      @include desktop{
+        display: block;
+      }
+      .button_icon{
+        font-size: 1rem;
+        margin-left: 8px;
+      }
+    }
+  }
+}
