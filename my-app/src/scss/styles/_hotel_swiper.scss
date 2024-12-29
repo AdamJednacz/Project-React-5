@@ -1,0 +1,111 @@
+
+.hotel_swiper {
+  width: 100%;
+
+}
+
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Individual card content layout */
+
+    &_img {
+      width:100%;
+      max-width: 300px;
+      height: 340px;
+      border-radius: 24px;
+      position: relative;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+      &_rate {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(120px);
+        padding: 8px;
+        border-radius: 50px;
+        &_icon {
+        color: #C9BEB3;
+        margin-right: 8px;
+        }
+
+        p {
+          color: var(--white);
+        }
+      }
+
+    }
+
+    &_dsc {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;    ;
+      width: 100%;
+      max-width: 300px;
+      margin-top: 32px;
+      &_text {
+
+        h5 {
+          margin-bottom: 16px;
+          font-weight: bolder;
+          font-size: var(--fs-h5);
+        }
+
+        &_parameters {
+          display: flex;
+          color: #C9BEB3;
+          span {
+            display: flex;
+            margin-right: 16px;
+            p {
+              margin-left: 8px;
+            }
+          }
+        }
+      }
+
+      &_price {
+        margin-top: 4px;
+        span {
+
+          color: #C49C74;
+        }
+
+        p {
+          color: #A1A7B0;
+          font-size: var(--fs-small);
+
+        }
+      }
+
+    }
+
+
+  }
+
+
+
+.prev-button ,.next-button {
+  color: var(--white);
+  background-color: #C9BeB3;
+  padding: 8px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+
+  border-radius: 50%;
+  position: absolute;
+  z-index: 2;
+  font-size: 1.5rem;
+  bottom:50%;
+  cursor: pointer;
+
+}
+.next-button{
+  right: 0;
+
+}
+.prev-button{
+
+}
