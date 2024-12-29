@@ -7,10 +7,12 @@ const Offers = () => {
 
   return (
     <section className="offers">
+
       <div className="container">
         <h1>Our Offers</h1>
         <Hotels_Swiper/>
       </div>
+
     </section>
   );
 };

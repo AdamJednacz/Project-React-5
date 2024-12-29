@@ -109,3 +109,19 @@
 .prev-button{
 
 }
+.swiper-wrapper {
+
+}
+.swiper-pagination{
+  z-index: 100000000 !important;
+  display: block;
+  position: absolute;
+  bottom:-10% !important;
+}
+
+.swiper-pagination-bullet{
+ background-color: black !important;
+}
+.swiper-pagination-bullet-active{
+  background-color: black;
+}

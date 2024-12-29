@@ -69,7 +69,7 @@ const Hotels_Swiper = () => {
       <Swiper
         className="hotel_swiper"
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        pagination={{clickable: true}}
+        pagination={true}
 
         spaceBetween={30}
         slidesPerView={5}
