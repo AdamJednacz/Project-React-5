@@ -1,0 +1,85 @@
+.property{
+  padding: 48px 0;
+  @include desktop{
+    padding: 96px 0;
+  }
+
+  .container{
+    flex-direction: column;
+    .property_text{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 32px;
+      position: relative;
+      @include desktop{
+        margin-bottom: 64px;
+      }
+      h3{
+        font-size: var(--fs-h3);
+        font-weight: bolder;
+        margin-bottom: 16px;
+      }
+      p{
+        line-height: 22px;
+        @include desktop{
+          max-width: 30%;
+        }
+      }
+      img{
+        max-width: 250px;
+        margin-top: 32px;
+        align-self: center;
+        @include desktop{
+          max-width: 500px;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+    .property_cards{
+      @include desktop{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap :64px;
+        &:hover .property_cards_card:not(:hover){
+          filter:sepia(100%);
+
+        }
+      }
+      &_card{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-bottom: 32px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+          &:hover{
+            scale: 1.1;
+
+          }
+
+        h5{
+          font-size: var(--fs-h5);
+          font-weight: bolder;
+          margin-bottom: 16px;
+        }
+        img{
+          width: 200px;
+          height: 400px;
+          border-radius: 24px;
+          object-fit: cover;
+          box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+
+
+        }
+      }
+    }
+
+
+
+  }
+}

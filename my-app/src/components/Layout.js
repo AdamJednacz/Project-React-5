@@ -3,6 +3,7 @@ import Main from "./Main";
 import Header from "./Header";
 import Description from "./Description";
 import Offers from "./Offers";
+import Property from "./Property";
 
 const Layout = () => {
     return (
@@ -13,6 +14,7 @@ const Layout = () => {
             </div>
           <Offers/>
           <Description/>
+        <Property/>
         </div>
     );
 };
