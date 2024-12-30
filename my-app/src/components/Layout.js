@@ -4,6 +4,7 @@ import Header from "./Header";
 import Description from "./Description";
 import Offers from "./Offers";
 import Property from "./Property";
+import Contact from "./Contact";
 
 const Layout = () => {
     return (
@@ -15,6 +16,7 @@ const Layout = () => {
           <Offers/>
           <Description/>
         <Property/>
+          <Contact/>
         </div>
     );
 };

@@ -1,9 +1,9 @@
 import React from 'react';
-import type_img1 from "../assets/hotels.png"
-import type_img2 from "../assets/apartaments.png"
-import type_img3 from "../assets/resorts.png"
-import type_img4 from "../assets/villas.png"
-import type_img5 from "../assets/cottages.png"
+import type_img1 from "../assets/hotels.jpg"
+import type_img2 from "../assets/apartaments.jpg"
+import type_img3 from "../assets/resorts.jpg"
+import type_img4 from "../assets/villas.jpg"
+import type_img5 from "../assets/cottages.jpg"
 import numbers from "../assets/2018-2024.png"
 
 const Property = () => {
@@ -43,9 +43,9 @@ const Property = () => {
           </div>
           <div className="property_cards">
             {types.map((type, index) => (
-              <div key={index} className="property_cards_card">
+              <div key={index} className="property_cards_card" style={{backgroundImage: `url(${type.img})`}}>
                 <h5>{type.name}</h5>
-                <img src={type.img} alt={type.name} />
+
               </div>
             ))}
           </div>

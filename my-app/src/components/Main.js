@@ -1,7 +1,7 @@
 import React from 'react';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCalendarDays, faMagnifyingGlass, faUsers} from "@fortawesome/free-solid-svg-icons"
-import Input from "./reusable_components/input";
+import Input from "./reusable_components/Input";
 
 const Main = () => {
 
@@ -20,8 +20,10 @@ const Main = () => {
                         <Input icon={faMagnifyingGlass} type={'text'} placeholder={"Search your place"} />
                     </div>
                     <div className="check">
-                      <Input type={'date'} placeholder={'Check in'}/>
-                      <Input type={'date'} placeholder={'Check out'} />
+
+                      <Input type={'date'} placeholder={'Check in'} label={'Check in'}/>
+
+                      <Input type={'date'} placeholder={'Check out'} label={'Check out'}/>
                     </div>
                     <div className="number_of_guests">
                       <FontAwesomeIcon icon={faUsers} />
