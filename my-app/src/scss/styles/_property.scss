@@ -37,13 +37,13 @@
       }
     }
     .property_cards{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
       @include desktop{
-        display: flex;
-        align-items: center;
-        justify-content: center;
         width: 100%;
-        flex-wrap: wrap;
-        gap: 16px;
         &:hover .property_cards_card:not(:hover){
           //filter:sepia(100%);
           filter: grayscale(100%);
@@ -58,24 +58,30 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: column;
-        margin-bottom: 32px;
+
+
         transition: all 0.3s ease-in-out;
         cursor: pointer;
-        min-width: 70px;
-        position: relative;
-        flex-grow: 1;
-        height: 500px;
+        flex-basis: 200px;
+        width: 200px;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: 16px;
-        flex-basis: 200px;
-        &:hover{
+        height: 400px;
+        flex-grow: 1;
+        @include desktop{
+          height: 500px;
+          min-width: 70px;
+          position: relative;
 
-          flex-grow: 9;
+          &:hover{
 
+            flex-grow: 9;
+
+          }
         }
+
 
         h5{
           font-size: var(--fs-h5);
