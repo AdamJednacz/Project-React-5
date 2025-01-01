@@ -27,8 +27,8 @@ const Main = () => {
                     </div>
                     <div className="number_of_guests">
                       <FontAwesomeIcon icon={faUsers} />
-                      <select className="number_of_guests_select">
-                        <option className="number_of_guests_select_option" value="" disabled selected>Guests</option>
+                      <select className="number_of_guests_select" defaultValue="">
+                        <option className="number_of_guests_select_option" value="" disabled>Guests</option>
                         {Array.from({length: 5}, (_, i) => (
                           <option className="number_of_guests_select_option" key={i + 1} value={i + 1}>
                             {i + 1}
