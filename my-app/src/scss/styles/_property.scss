@@ -29,6 +29,8 @@
         max-width: 250px;
         margin-top: 32px;
         align-self: center;
+
+
         @include desktop{
           max-width: 500px;
           position: absolute;
@@ -59,7 +61,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 
         transition: all 0.3s ease-in-out;
         cursor: pointer;
